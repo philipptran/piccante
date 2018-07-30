@@ -1,0 +1,40 @@
+apply plugin: 'war'
+apply plugin: 'java'
+
+group = 'de.pentos'
+version = '0.1.0'
+archivesBaseName = "${project.group}.${project.name}"
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+compileJava {
+       options.fork = true
+}
+
+configurations {
+	provided
+	compile.extendsFrom provided
+}
+
+dependencies {
+	providedCompile "javax.servlet:javax.servlet-api:3.1.0"
+	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.12.Final'
+  compile group: 'org.springframework', name: 'spring-webmvc', version: '5.0.2.RELEASE'
+  compile group: 'org.springframework', name: 'spring-orm', version: '5.0.2.RELEASE'
+  compile group: 'org.springframework.security', name: 'spring-security-web', version: '5.0.1.RELEASE'
+  compile group: 'org.springframework.security', name: 'spring-security-config', version: '5.0.1.RELEASE'
+  compile group: 'com.sap.cloud.db.jdbc', name: 'ngdbc', version: '2.2.16'
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.5'
+	compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.5'
+	
+	
+  providedCompile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+  
+
+  	
+}
+
+repositories {
+       mavenCentral()
+       mavenLocal()
+}

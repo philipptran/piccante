@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/ext/bootstrap.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" href="/assets/img/PiccanteLogo_Tab.jpg">
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light borderTopDown">
+			<a class="navbar-brand" href="#"><img class="d-inline-block mr-2 mb-1" height="30"
+				src="/assets/img/PiccanteLogo.jpg"><span class=".d-none .d-sm-none">Pizza Piccante
+					...und gut.</span></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-item nav-link" href="#/home"
+						data-bind="css:{'active': ko.Piccante._App.NavBar.activeView() === ko.Piccante._App.NavBar.VIEWS[0]}">Home</a>
+					</li>
+					<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="noWhere"
+						id="betsDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Angebot </a>
+						<div class="dropdown-menu" aria-labelledby="betsDropDown">
+							<a class="dropdown-item" href="#/betsMatches"
+								data-bind="css: {'active': ko.Piccante._App.NavBar.activeView() === ko.Piccante._App.NavBar.VIEWS[0]}">Speisekarte</a>
+							<a class="dropdown-item" href="#/betsFinalist"
+								data-bind="css:{'active':ko.Piccante._App.NavBar.activeView() === ko.Piccante._App.NavBar.VIEWS[3]}">Bestellung</a>
+						</div></li>
+					<li class="nav-item"><a class="nav-item nav-link" href="#/team"
+						data-bind="css:{'active':ko.Piccante._App.NavBar.activeView() === ko.Piccante._App.NavBar.VIEWS[1]}">Unser
+							Team</a></li>
+					<li class="nav-item"><a class="nav-item nav-link" href="#/standings"
+						data-bind="css:{'active':ko.Piccante._App.NavBar.activeView() === ko.Piccante._App.NavBar.VIEWS[4]}">Jobs</a>
+					</li>
+					<li class="nav-item"><a class="nav-item nav-link" href="#/ranking"
+						data-bind="css:{'active':ko.Piccante._App.NavBar.activeView() === ko.Piccante._App.NavBar.VIEWS[5]}">Kontakt</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="routeNode"></div>
+	</div>
+	<script src="/js/ext/jquery.min.js"></script>
+	<script src="/js/ext/bootstrap.min.js"></script>
+	<script src="/js/ext/knockout-3.4.2.js"></script>
+	<script src="/js/ext/signals.min.js"></script>
+	<script src="/js/ext/hasher.min.js"></script>
+	<script src="/js/ext/crossroads.min.js"></script>
+	<script src="/js/application.min.js"></script>
+</body>
+</html>
