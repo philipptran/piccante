@@ -7,6 +7,7 @@ ko.Piccante.vm.AppVM = function() {
 	self.NavBar = new ko.Piccante.vm.NavBarVM();
 	
 	self.render = function(vm){
+		console.log("Start to render the content");
 		ko.cleanNode(_routeNode[0]);
 		_routeNode.empty();
 		if(vm && vm.render){
