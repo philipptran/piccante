@@ -1,9 +1,7 @@
 crossroads.addRoute("/team", function() {
-	// console.log("Route was changed to \"#/team\"");
-	 ko.Piccante._App.NavBar.activeView.("team");
-	// console.log("before the execution");
-	 ko.Piccante._App.render(new ko.Piccante.vm.PageTeamVM());
-	// console.log("after the execution");
+	ko.Piccante._App.NavBar.activeView(ko.Piccante._App.NavBar.VIEWS[3]);
+	console.log("changed to this");
+	ko.Piccante._App.render(new ko.Piccante.vm.PageTeamVM());
 });
 
 crossroads.addRoute("/home", function() {
@@ -11,7 +9,7 @@ crossroads.addRoute("/home", function() {
 	// console.log("breofe the execution");
 	ko.Piccante._App.render(new ko.Piccante.vm.PageHomeVM());
 	// console.log("after the execution");
-});f
+});
 
 crossroads.addRoute("/", function() {
 	hasher.setHash("/home");
